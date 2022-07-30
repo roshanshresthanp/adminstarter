@@ -104,7 +104,7 @@
                         <div class="row">
                             <div class="col-lg-5 col-md-12">
                                 <div class="infomation_image wow bounceInLeft" data-wow-duration="1s">
-                                    <img src="{{ $message->featured_img }}"
+                                    <img src="{{ $message->image }}"
                                         onerror="this.src='{{ asset('frontend/images/noimage.jpg') }}';" alt="">
                                     <img src="{{ asset('frontend/images/dot-shape.png') }}" alt="" class="dot_shape js-tilt">
                                 </div>
@@ -239,7 +239,7 @@
                     </div>
                     <div class="col-lg-6 col-md-12 wow lightSpeedIn" data-wow-duration="1s">
                         <div class="provider_images">
-                            <img src="{{ $adv->featured_img ?? asset('frontend/images/porvide-01.png') }}" alt="">
+                            <img src="{{ $adv->image ?? asset('frontend/images/porvide-01.png') }}" alt="">
                         </div>
                     </div>
                 </div>
@@ -361,7 +361,7 @@
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <div class="roll_images wow bounceInRight" data-wow-duration="1s">
-                            <img src="{{ $whyUs->featured_img ?? asset('frontend/images/img3.png') }}" alt="">
+                            <img src="{{ $whyUs->image ?? asset('frontend/images/img3.png') }}" alt="">
                         </div>
                     </div>
                 </div>
@@ -445,7 +445,7 @@
     
     <!-- .enroll wrapper -->
     @isset($enroll)
-        <section id="enroll_wrapper" class="pt pb" style="background-image: url({{ $enroll->freezone_img }});">
+        <section id="enroll_wrapper" class="pt pb" style="background-image: url({{ $enroll->banner_image }});">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-12">

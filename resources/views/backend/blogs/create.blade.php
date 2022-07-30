@@ -321,16 +321,9 @@
     <script>
         $(document).ready(function(){
             $('.lfm').filemanager('image');
-            $('.select2').select2();
+            // $('.select2').select2();
 
 
-        });
-    </script>
-    <!-- summernote js -->
-    <script type="text/javascript">
-        $('#summernote').summernote({
-            height: 300,
-            placeholder: "Blog content.."
         });
     </script>
 @endpush

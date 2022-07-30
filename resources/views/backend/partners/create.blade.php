@@ -60,6 +60,15 @@
                                     @endisset
                                         <div class="row">
                                             <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="partner_name">Partner Name: </label>
+                                                    <input type="text" class="form-control" value="{{ old('partner_name',@$existing_partner->partner_name) }}" name="partner_name" placeholder="Partner Name">
+                                                    <p class="text-danger">
+                                                        {{ $errors->first('partner_name') }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
                                                 <label for="banner_image">Partner logo:</label>
                                                 <div class="input-group">
                                                     <span class="input-group-btn">
@@ -80,15 +89,7 @@
                                                 <img id="partner_logo_output" style="height: 150px; width:150px;" src="{{ Storage::disk('uploads')->url('noimage.jpg') }}">
                                             </div> --}}
 
-                                            <div class="col-md-9">
-                                                <div class="form-group">
-                                                    <label for="partner_name">Partner Name: </label>
-                                                    <input type="text" class="form-control" value="{{ old('partner_name',@$existing_partner->partner_name) }}" name="partner_name" placeholder="Partner Name">
-                                                    <p class="text-danger">
-                                                        {{ $errors->first('partner_name') }}
-                                                    </p>
-                                                </div>
-                                            </div>
+                                            
 
                                             <div class="col-md-12 mt-4">
                                                 <button type="submit" class="btn btn-success">Submit</button>

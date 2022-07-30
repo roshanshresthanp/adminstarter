@@ -102,7 +102,7 @@
                     <div>
                         <div class="delicacy_card wow bounceInDown" data-wow-delay="0.5s">
                             <div class="delicacy_thumbnail">
-                                <img src="{{ Storage::disk('uploads')->url($pro->featured_img) }}" alt="">
+                                <img src="{{ Storage::disk('uploads')->url($pro->image) }}" alt="">
 
                             </div>
                             <div class="delicacy_caption">

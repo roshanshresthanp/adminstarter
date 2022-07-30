@@ -76,7 +76,7 @@ class ProductController extends Controller
         {
             $image = $request->file('featured_photo');
             $photo = $image->store('products', 'uploads');
-            $input['featured_img'] = $photo;
+            $input['image'] = $photo;
         }
         $input['publish_status'] =$request->publish_status ?? 0;
         $input['slug'] = str_replace(' ','-' ,(strtolower($request->title)));
@@ -158,7 +158,7 @@ class ProductController extends Controller
         {
             $image = $request->file('featured_photo');
             $photo = $image->store('products', 'uploads');
-            $input['featured_img'] = $photo;
+            $input['image'] = $photo;
         }
         $input['publish_status'] =$request->publish_status ?? 0;
         $input['slug'] = str_replace(' ','-' ,(strtolower($request->title)));

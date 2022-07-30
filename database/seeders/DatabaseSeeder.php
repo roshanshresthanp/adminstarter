@@ -23,14 +23,14 @@ class DatabaseSeeder extends Seeder
         $this->call(MenuSeeder::class);
 
         Setting::updateOrCreate(['id'=>1],[
-                "company_name" => "DAV College",
-                "email" => "dav@gmail.com ",
-                "contact_no" => "01-5904030",
-                "phone" => "9841682658",
+                "company_name" => "Company Name",
+                "email" => "company@gmail.com ",
+                "contact_no" => "01-5547922",
+                "phone" => "98596658",
                 "province_no" => "3",
                 "district_no" => "23",
-                "local_address" => "Sundhara",
-                "pan_vat" => "1542-551-575",
+                "local_address" => "Tinkune",
+                "pan_vat" => "1632-591-521",
                 "total_learner" => "50",
                 "total_nationality" => "28",
                 "total_activity" => "122",
@@ -38,26 +38,18 @@ class DatabaseSeeder extends Seeder
         ]
     );
 
-        // MissionMessages::insert([
-        //     [
-        //         "mission" => "RajuPariyar, A Product Of Nectar Digit",
-        //         "vision" => "RajuPariyar, A Product Of Nectar Digit",
-        //         "company_values" => "RajuPariyar, A Product Of Nectar Digit",
-        //         "welcome_title" => "RajuPariyar, A Product Of Nectar Digit",
-        //         "welcome_sub_title" => "RajuPariyar, A Product Of Nectar Digit",
-        //         "welcome_message" => "RajuPariyar, A Product Of Nectar Digit",
-        //         'youtube_link' => "https://www.youtube.com/watch?v=V00TZgYN-jc"
-        //     ]
-        // ]);
 
-        User::insert([
+        User::updateOrCreate(
+            ['id'=>1],
+            
             [
-                "name"=>"Nectar Digit",
-                "email"=>"nectardigit@admin.com",
-                "password"=>Hash::make("Nectar@321"),
+                "id"=>1,
+                "name"=>"Super Admin",
+                "email"=>"admin@gmail.com",
+                "password"=>Hash::make("password"),
                 "created_at"=>date('Y-m-d H:i:s'),
                 "updated_at"=>date('Y-m-d H:i:s'),
-            ],
+            
         ]);
     }
 }

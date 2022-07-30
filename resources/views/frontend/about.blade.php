@@ -27,7 +27,7 @@
 			<div class="row">
 				<div class="col-lg-6 col-md-12">
 					<div class="about-list-media wow bounceInLeft" data-wow-duration="1s">
-						<img src="{{$item->featured_img??$item->freezone_img}}" alt="images">
+						<img src="{{$item->image??$item->banner_image}}" alt="images">
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-12">
@@ -45,7 +45,7 @@
 			<div class="row">
 				<div class="col-lg-6 col-md-12">
 					<div class="about-list-media wow bounceInRight" data-wow-duration="1s">
-						<img src="{{ $item->featured_img??$item->banner_img }}" alt="images">
+						<img src="{{ $item->image??$item->banner_img }}" alt="images">
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-12">

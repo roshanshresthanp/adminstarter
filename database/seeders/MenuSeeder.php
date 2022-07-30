@@ -46,14 +46,14 @@ class MenuSeeder extends Seeder
                 'name' => 'Course',
                 'slug' => Str::slug('Course')
             ],
-            [
-                'name' => 'Team',
-                'slug' => Str::slug('Team')
-            ],
-            [
-                'name' => 'All Course',
-                'slug' => Str::slug('All Course')
-            ],
+            // [
+            //     'name' => 'Team',
+            //     'slug' => Str::slug('Team')
+            // ],
+            // [
+            //     'name' => 'All Course',
+            //     'slug' => Str::slug('All Course')
+            // ],
 
 
         ]);

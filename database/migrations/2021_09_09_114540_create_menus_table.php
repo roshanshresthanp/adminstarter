@@ -32,6 +32,7 @@ class CreateMenusTable extends Migration
             $table->string('meta_keywords')->nullable();
             $table->longText('meta_description')->nullable();
             $table->string('og_image')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

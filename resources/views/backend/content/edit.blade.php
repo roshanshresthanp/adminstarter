@@ -161,11 +161,11 @@
                                                         <i class="fa fa-picture-o"></i> Choose
                                                       </a>
                                                     </span>
-                                                    <input id="thumbnail1" class="form-control" value="{{$content->featured_img}}" type="text" name="featured_img" readonly>
+                                                    <input id="thumbnail1" class="form-control" value="{{$content->image}}" type="text" name="image" readonly>
                                                   </div>
                                                   <img id="holder1" style="margin-top:15px;max-height:100px;">
                                                   <p class="text-danger">
-                                                    {{$errors->first('featured_img')}}
+                                                    {{$errors->first('image')}}
                                                 </p>
                                             </div>
                                             <div class="col-md-6">
@@ -176,11 +176,11 @@
                                                         <i class="fa fa-picture-o"></i> Choose
                                                       </a>
                                                     </span>
-                                                    <input id="thumbnail" class="form-control" value="{{$content->freezone_img}}" type="text" name="freezone_img" readonly>
+                                                    <input id="thumbnail" class="form-control" value="{{$content->banner_image}}" type="text" name="banner_image" readonly>
                                                   </div>
                                                   <img id="holder" style="margin-top:15px;max-height:100px;">
                                                   <p class="text-danger">
-                                                    {{$errors->first('freezone_img')}}
+                                                    {{$errors->first('banner_image')}}
                                                  </p>
                                             </div>
                                             <div class="col-md-12">

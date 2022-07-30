@@ -6,7 +6,7 @@
 @section('content')
 
 <!--page-title-area start-->
-<section class="page-title-area d-flex align-items-end" style="background-image: url({{Storage::disk('uploads')->url($content->freezone_img); }})">
+<section class="page-title-area d-flex align-items-end" style="background-image: url({{Storage::disk('uploads')->url($content->banner_image); }})">
     <div class="container">
         <div class="row align-items-end">
             <div class="col-lg-12">

@@ -2,9 +2,9 @@
 @push('styles')
 {{-- <link rel="stylesheet" href="{{asset('backend/plugins/select2/css/select2.min.css')}}"> --}}
 <style>
-    .select2-container--default .select2-selection--multiple .select2-selection__choice__display {
+    /* .select2-container--default .select2-selection--multiple .select2-selection__choice__display {
         color: rgb(97, 22, 22) !important;
-    }
+    } */
     .switch {
         position: relative;
         display: inline-block;
@@ -322,7 +322,7 @@
     <script>
         $(document).ready(function(){
             $('.lfm').filemanager('image');
-            $('.select2').select2();
+            // $('.select2').select2();
 
 
         });

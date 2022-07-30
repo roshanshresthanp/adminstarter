@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Content extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
 
     public const contentType = [
         'About','Message','Enroll','Why-Choose-Us','Benefit-Advantage','Admission-Form','Inquiry-Form','Pre-Registration-Form'
@@ -18,8 +19,8 @@ class Content extends Model
         'content_page_title',
         'content_url',
         'content_body',
-        'featured_img',
-        'freezone_img',
+        'image',
+        'banner_image',
         'meta_description',
         'meta_keywords',
         'meta_title',
@@ -27,12 +28,11 @@ class Content extends Model
         'show_on_menu',
         'external_link',
         'publish_status',
-        'delete_status',
     ];
 
     public function scopeStatus($query)
     {
-        return $query->where(['publish_status'=>1,'delete_status'=>0]);
+        return $query->where(['publish_status'=>1]);
 
     }
 }

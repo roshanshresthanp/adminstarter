@@ -22,7 +22,7 @@
             <div class="col-lg-4">
                 <div class="event_card_layout feel_animation wow bounceInUp">
                         <div class="event_images_card">
-                            <img src="{{Storage::disk('uploads')->url($value->featured_img)}}" alt="{{$value->content_title}}">
+                            <img src="{{Storage::disk('uploads')->url($value->image)}}" alt="{{$value->content_title}}">
                         </div>
                         <div class="event_ec_caption">
                             <a href="{{route('contentdetail', $value->content_url)}}">

@@ -3,7 +3,7 @@
     @include('frontend.includes.meta')
 @endsection
 @section('content')
-<section id="banner_header_wrapper" style="background-image:url('{{ Storage::disk('uploads')->url($content->freezone_img) }}')">
+<section id="banner_header_wrapper" style="background-image:url('{{ Storage::disk('uploads')->url($content->banner_image) }}')">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="nex_news_detail_content mt-2">
-                    <img src="{{ Storage::disk('uploads')->url($content->featured_img) }}" alt="{{$content->content_title}}">
+                    <img src="{{ Storage::disk('uploads')->url($content->image) }}" alt="{{$content->content_title}}">
                     <h1>{{$content->content_title}}</h1>
                     <p>{!!$content->content_body!!}</p>
                 </div>
@@ -35,7 +35,7 @@
                         @foreach ($recent as $value)
                         <div class="in_flex_fx">
                             <div class="images_img">
-                                <img src="{{ Storage::disk('uploads')->url($value->featured_img) }}" alt="{{$value->content_title}}">
+                                <img src="{{ Storage::disk('uploads')->url($value->image) }}" alt="{{$value->content_title}}">
                             </div>
                             <div class="images_description">
                               <a href="{{route('contentdetail', $value->content_url)}}">{{$value->content_title}}</a>

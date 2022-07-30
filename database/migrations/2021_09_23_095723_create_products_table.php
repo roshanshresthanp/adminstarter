@@ -22,7 +22,7 @@ class CreateProductsTable extends Migration
             $table->double('price')->nullable();
             $table->longText('main_description')->nullable();
             $table->longText('brief_description')->nullable();
-            $table->string('featured_img')->nullable();
+            $table->string('image')->nullable();
             $table->softDeletes();
 
             $table->string('meta_title')->nullable();

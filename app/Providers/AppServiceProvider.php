@@ -42,9 +42,9 @@ class AppServiceProvider extends ServiceProvider
         ->take(5)
         ->get());
 
-        view()->share('admissionform',Content::status()->where('content_type','Admission-Form')->first());
-        view()->share('inquiryform',Content::status()->where('content_type','Inquiry-Form')->first());
-        view()->share('registrationform',Content::status()->where('content_type','Pre-Registration-Form')->first());
+        // view()->share('admissionform',Content::status()->where('content_type','Admission-Form')->first());
+        // view()->share('inquiryform',Content::status()->where('content_type','Inquiry-Form')->first());
+        // view()->share('registrationform',Content::status()->where('content_type','Pre-Registration-Form')->first());
 
 
 

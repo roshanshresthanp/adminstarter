@@ -24,7 +24,7 @@ class ContentController extends Controller
             return view('backend.content.searchAjax', compact('content'));
 
         }
-        $content = Content::latest()->where('delete_status', '0')->paginate(10);
+        $content = Content::latest()->paginate(10);
         return view('backend.content.index', compact('content'));
     }
 
@@ -49,8 +49,8 @@ class ContentController extends Controller
     public function store(Request $request)
     {
         $data = $this->validate($request, [
-            'featured_img' => 'nullable|string|max:250',
-            'freezone_img' => 'nullable|string|max:250',
+            'image' => 'nullable|string|max:250',
+            'banner_image' => 'nullable|string|max:250',
             'content_body' => 'nullable',
             'content_title' => 'required',
         ]);
@@ -101,8 +101,8 @@ class ContentController extends Controller
     public function update(Request $request,$id)
     {
         $this->validate($request, [
-            'featured_img' => 'nullable|string|max:250',
-            'freezone_img' => 'nullable|string|max:250',
+            'image' => 'nullable|string|max:250',
+            'banner_image' => 'nullable|string|max:250',
             'content_body' => 'nullable',
             'content_title' => 'nullable',
             'content_type'=>'required',
@@ -110,8 +110,8 @@ class ContentController extends Controller
         ]);
         $contents = Content::findorfail($id);
         $contents->update([
-            'featured_img' => $request->featured_img,
-            'freezone_img' => $request->freezone_img,
+            'image' => $request->image,
+            'banner_image' => $request->banner_image,
             'content_title' => $request->content_title,
             'content_page_title' => $request->content_page_title,
             'content_type' => $request->content_type,
@@ -123,7 +123,6 @@ class ContentController extends Controller
             'show_on_menu' => $request->show_on_menu??'N',
             'meta_title' => $request->meta_title,
             'external_link' => $request->external_link,
-            'delete_status' => '0'
 
         ]);
         $contents->save();
@@ -138,9 +137,6 @@ class ContentController extends Controller
      */
     public function destroy($id)
     {
-        // $existing_content = Content::findorFail($id)->update([
-        //     'delete_status' => '1'
-        // ]);
         Content::findorFail($id)->delete();
         return redirect()->route('content.index')->with('success', 'Content is deleted successfully.');
     }

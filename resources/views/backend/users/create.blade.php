@@ -1,7 +1,4 @@
 @extends('backend.layouts.app')
-@push('styles')
-
-@endpush
 @section('content')
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -75,6 +72,3 @@
         <!-- /.content -->
     </div>
 @endsection
-@push('scripts')
-
-@endpush

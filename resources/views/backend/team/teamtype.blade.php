@@ -85,9 +85,9 @@
                                     <table class="table table-bordered text-center">
                                         <thead class="thead-light">
                                             <tr>
-                                                <th>S.No.</th>
+                                                <th style="width: 15px">S.No.</th>
                                                 <th>Team type</th>
-                                                {{-- <th>Email</th> --}}
+                                                <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -107,6 +107,7 @@
                                                         <td>{{ $loop->iteration }}</td>
                                                         <td>{{$teamType->name}}
                                                         </td>
+                                                        <td>@if($teamType->status==1) <span class="badge badge-success">Active</span> @else <span class="badge badge-danger">Inactive</span> @endif </td>
                                                         <td>
 
                                                         <form action="{{ route('teamType.destroy', $teamType->id) }}" method="POST">

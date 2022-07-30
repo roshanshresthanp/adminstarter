@@ -193,7 +193,7 @@
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-list"></i>
             <p>
-              Menu Management
+              Menus
               <i class="fas fa-angle-left right"></i>
             </p>
           </a>

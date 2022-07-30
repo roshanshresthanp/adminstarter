@@ -50,7 +50,7 @@
                             <div class="gallery_gp_card wow bounceInUp">
                                 <a href="{{ route('product.detail',$product->slug)}}">
                                     <div class="gallery_thumbnail_gt">
-                                        <img src="{{Storage::disk('uploads')->url($product->featured_img)}}" alt="">
+                                        <img src="{{Storage::disk('uploads')->url($product->image)}}" alt="">
                                     </div>
                                     <div class="gallery_caption_gc">
                                         <h4>{{ $product->brief_description }}</h4>

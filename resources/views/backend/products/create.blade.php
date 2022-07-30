@@ -226,7 +226,7 @@
                                                 <div class="form-group">
                                                     <label for="picture">Choose a featured photo:</label>
                                                     <input type="file" class="form-control" name="featured_photo" id="picture" onchange="loadMemberPhoto(event)"> <br>
-                                                    <img id="member_photo_output" style="height: 150px;width: 150px;" src="@if(!isset($product)) {{ Storage::disk('uploads')->url('noimage.jpg') }} @else {{ Storage::disk('uploads')->url($product->featured_img) }} @endif">
+                                                    <img id="member_photo_output" style="height: 150px;width: 150px;" src="@if(!isset($product)) {{ Storage::disk('uploads')->url('noimage.jpg') }} @else {{ Storage::disk('uploads')->url($product->image) }} @endif">
 
                                                     <p class="text-danger">
                                                         {{ $errors->first('picture') }}

@@ -19,8 +19,8 @@ class CreateContentsTable extends Migration
             $table->string('content_page_title')->nullable();
             $table->string('content_url');
             $table->mediumText('content_body')->nullable();
-            $table->string('featured_img')->nullable();
-            $table->string('freezone_img')->nullable();
+            $table->string('image')->nullable();
+            $table->string('banner_image')->nullable();
             $table->string('meta_description')->nullable();
             $table->string('meta_keywords')->nullable();
             $table->string('meta_title')->nullable();
@@ -28,7 +28,7 @@ class CreateContentsTable extends Migration
             $table->string('show_on_menu')->default('N')->nullable();
             $table->string('external_link')->nullable();
             $table->boolean('publish_status')->default('1');
-            $table->boolean('delete_status')->default('0');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

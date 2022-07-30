@@ -281,17 +281,10 @@
 @endsection
 
 @push('scripts')
-    <script type="text/javascript">
-        $('#summernote').summernote({
-            // height: 100,
-            placeholder: "Blog category content.."
-        });
-    </script>
 <script src="{{ asset('vendor/laravel-filemanager/js/stand-alone-button.js')}}"></script>
 <script>
     $(document).ready(function(){
         $('.lfm').filemanager('image');
-
     });
 </script>
 @endpush

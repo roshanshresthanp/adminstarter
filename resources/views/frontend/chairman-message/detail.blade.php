@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-lg-5 col-md-12">
                 <div class="infomation_image wow bounceInLeft" data-wow-duration="1s">
-                    <img src="{{@$message->featured_img??asset('frontend/images/noimage.jpg')}}" alt="">
+                    <img src="{{@$message->image??asset('frontend/images/noimage.jpg')}}" alt="">
                     <img src="{{ asset('frontend/images/dot-shape.png')}}" alt="" class="dot_shape js-tilt">
                 </div>
             </div>

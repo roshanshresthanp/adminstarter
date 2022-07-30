@@ -11,7 +11,7 @@
         @foreach ($products as $product)
             <tr>
                     <td>
-                        <img src="{{ Storage::disk('uploads')->url($product->featured_img) }}" alt="{{ $product->title }}" style="height: 90px; width: 150px;">
+                        <img src="{{ Storage::disk('uploads')->url($product->image) }}" alt="{{ $product->title }}" style="height: 90px; width: 150px;">
                     </td>
                 <td>
                     {{ $product->title }}

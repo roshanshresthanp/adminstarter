@@ -60,7 +60,7 @@
             <div class="col-lg-3">
                 <div class="nutrition_card wow bounceInDown" data-wow-delay="0.5s">
                     <div class="nutrition_card_images">
-                        <img src="{{Storage::disk('uploads')->url($suggest->featured_img)}}" alt="{{ $suggest->name }}" height="200px">
+                        <img src="{{Storage::disk('uploads')->url($suggest->image)}}" alt="{{ $suggest->name }}" height="200px">
                     </div>
                     <div class="nutrition_caption">
                         <h3>{{ $suggest->name }}</h3>
@@ -91,7 +91,7 @@
                     <div>
                         <div class="delicacy_card wow bounceInDown" data-wow-delay="0.5s">
                             <div class="delicacy_thumbnail">
-                                <img src="{{ Storage::disk('uploads')->url($value->featured_img) }}" alt="{{$value->name}}">
+                                <img src="{{ Storage::disk('uploads')->url($value->image) }}" alt="{{$value->name}}">
 
                             </div>
                             <div class="delicacy_caption">
@@ -177,7 +177,7 @@
 
 
                                             <div class="items_images">
-                                                <img src="{{Storage::disk('uploads')->url($food->featured_img) }}" alt="{{ $food->name }}">
+                                                <img src="{{Storage::disk('uploads')->url($food->image) }}" alt="{{ $food->name }}">
                                             </div>
                                             <div class="item_caption">
                                                 <P>{{ $food->name }}</P>

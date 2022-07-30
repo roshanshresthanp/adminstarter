@@ -82,7 +82,7 @@
                                                     <tr>
                                                         <td>{{ $loop->iteration }}</td>
                                                         <td>
-                                                            <img src="{{$slider->featured_img}}" alt="{{$slider->content_title}}" style="height: 100px; width: 150px;">
+                                                            <img src="{{$slider->image}}" alt="{{$slider->content_title}}" style="height: 100px; width: 150px;">
                                                         </td>
                                                         <td>{{$slider->content_title}}</td>
                                                         <td>{{$slider->content_type}}</td>
